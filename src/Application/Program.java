@@ -1,5 +1,5 @@
-import entities.Department;
-import entities.Seller;
+import Model.Entities.Department;
+import Model.Entities.Seller;
 
 void main() {
 
