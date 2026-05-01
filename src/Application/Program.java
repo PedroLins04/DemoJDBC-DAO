@@ -20,4 +20,12 @@ void main() {
         IO.println(obj);
     }
 
+    IO.println();
+
+    IO.println("====TEST N.3 -> Department-findAll====");
+    list = sellerDao.findAll();
+    for (Seller obj : list) {
+        IO.println(obj);
+    }
+
 }
