@@ -9,7 +9,7 @@ void main() {
     SellerDao sellerDao = DaoFactory.CreateSellerDao();
 
     IO.println("====TEST N.1 -> Seller-findById====");
-    Seller seller = sellerDao.findById(2);
+    Seller seller = sellerDao.findById(5);
     IO.println(seller);
 
     IO.println();

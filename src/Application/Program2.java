@@ -4,6 +4,8 @@ import Model.Entities.Department;
 
 void main () {
 
+    Scanner sc = new Scanner(System.in);
+
     DepartmentDao depDao = DaoFactory.CreateDepartmentDao();
 
     IO.println("====TEST N.1 -> Department-findById====");
@@ -25,13 +27,18 @@ void main () {
 
     IO.println();
 
-    IO.println("====TEST N.4 -> Department-Update====");
-    department = depDao.findById(5);
-    department.setName("Games");
-    depDao.update(department);
-    IO.println("Department updated!");
+    //IO.println("====TEST N.4 -> Department-Update====");
+    //department = depDao.findById(5);
+    //department.setName("Games");
+    //depDao.update(department);
+    //IO.println("Department updated!");
 
     IO.println();
 
+    IO.println("====TEST N.5 -> Department-Delete====");
+    IO.print("Witch Id you want delete?");
+    int Id = sc.nextInt();
+    depDao.deleteById(Id);
+    IO.print("Department " + Id + " deleted.");
 }
 

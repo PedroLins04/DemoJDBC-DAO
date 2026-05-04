@@ -142,7 +142,7 @@ public class SellerDaoJDBC implements SellerDao {
 
     private Department InstantiateDepartment(ResultSet rs) throws SQLException {
         Department dep = new Department();
-        dep.setId(rs.getInt("DepId"));
+        dep.setId(rs.getInt("DepartmentId"));
         dep.setName(rs.getString ("DepName"));
         return dep;
     }
