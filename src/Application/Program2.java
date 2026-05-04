@@ -18,10 +18,20 @@ void main () {
 
     IO.println();
 
-    IO.println("====TEST N.3 -> Department-Insert");
-    Department newDep = new Department (null, "Food");
-    depDao.insert(newDep);
-    IO.println("New Department inserted! Id:" + newDep.getId());
+    //IO.println("====TEST N.3 -> Department-Insert");
+    //Department newDep = new Department (null, "Food");
+    //depDao.insert(newDep);
+    //IO.println("New Department inserted! Id:" + newDep.getId());
+
+    IO.println();
+
+    IO.println("====TEST N.4 -> Department-Update====");
+    department = depDao.findById(5);
+    department.setName("Games");
+    depDao.update(department);
+    IO.println("Department updated!");
+
+    IO.println();
 
 }
 
